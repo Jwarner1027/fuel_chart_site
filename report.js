@@ -34,14 +34,20 @@ var yardTrace = {
     x: uniqueValuesY,
     y: Object.values(totalY),
     name: "Yard",
-    type: 'bar'
+    type: 'bar',
+    marker: {
+        color: 'rgb(247,81,81)'
+    }
 };
 
 var vendorTrace = {
     x: uniqueValuesV,
     y: Object.values(totalV),
     name: "Other",
-    type: 'bar'
+    type: 'bar',
+    marker: {
+        color: 'rgb(51, 51, 255)',
+    },
 };
 
 var data = [yardTrace, vendorTrace];
@@ -49,8 +55,8 @@ var data = [yardTrace, vendorTrace];
 var layout = {barmode: 'group',
     xaxis: {type: 'category',
     "categoryorder": "array",
-    "categoryarray": items.map(x => x[0])},
-    title: "Fuel Report"
+    "categoryarray": items.map(x => x[0])}
+
 };
 
 var config = {responsive: true}
